@@ -18,3 +18,12 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 
+### Windows (PowerShell)
+```powershell
+git clone https://github.com/stephydaysp/ProyectoFront.git
+cd ProyectoFront
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
