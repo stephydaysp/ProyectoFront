@@ -27,3 +27,36 @@ py -m venv .venv
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+
+## Instrucciones para clonar y probar Actividad 2
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/stephydaysp/ProyectoFront.git
+   cd ProyectoFront
+2. Crear entorno virtual y activarlo:
+
+En macOS / Linux:
+python3 -m venv .venv
+source .venv/bin/activate
+
+En Windows (PowerShell):
+python -m venv .venv
+.venv\Scripts\Activate
+
+3. Instalar dependencias:
+pip install -r requirements.txt
+
+4. Aplicar migraciones:
+python manage.py makemigrations
+python manage.py migrate
+
+5. Crear superusuario (usuario/clave: inacap):
+python manage.py shell -c "from django.contrib.auth.models import User; User.objects.create_superuser('inacap','inacap@example.com','inacap')"
+
+6. Levantar el servidor y entrar a:
+http://127.0.0.1:8000/admin/
+Usuario: inacap
+Clave: inacap
+
+
